@@ -25,7 +25,7 @@ export default function AdminPage() {
 
   const fetchUsers = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/admin/users", {
+      const res = await axios.get("https://ai-chat-assistant-j6r6.onrender.com/api/admin/users", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setUsers(res.data.users);
@@ -38,7 +38,7 @@ export default function AdminPage() {
 
   const fetchAnalytics = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/admin/analytics", {
+      const res = await axios.get("https://ai-chat-assistant-j6r6.onrender.com/api/admin/analytics", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setAnalytics(res.data);
@@ -51,7 +51,7 @@ export default function AdminPage() {
     if (!window.confirm("Are you sure you want to delete this user?")) return;
 
     try {
-      await axios.delete(`http://localhost:5000/api/admin/users/${userId}`, {
+      await axios.delete(`https://ai-chat-assistant-j6r6.onrender.com/api/admin/users/${userId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -68,7 +68,7 @@ export default function AdminPage() {
     if (!window.confirm("Are you sure you want to clear all chat sessions?")) return;
 
     try {
-      await axios.delete("http://localhost:5000/api/admin/clear-chats", {
+      await axios.delete("https://ai-chat-assistant-j6r6.onrender.com/api/admin/clear-chats", {
         headers: { Authorization: `Bearer ${token}` },
       });
 

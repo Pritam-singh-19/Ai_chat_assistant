@@ -67,7 +67,7 @@ export default function ChatPage() {
       } : {};
 
       const response = await axios.post(
-        "http://localhost:5000/api/chat/message",
+        "https://ai-chat-assistant-j6r6.onrender.com/api/chat/message",
         {
           message: text,
           model: selectedModel,
@@ -203,7 +203,7 @@ export default function ChatPage() {
       const token = localStorage.getItem("token");
       
       const response = await axios.post(
-        "http://localhost:5000/api/chat/message",
+        "https://ai-chat-assistant-j6r6.onrender.com/api/chat/message",
         {
           message: `Please analyze this text extracted from a ${isPDF ? 'PDF document' : 'an image'}:\n\n${extractedText}`,
           model: selectedModel,

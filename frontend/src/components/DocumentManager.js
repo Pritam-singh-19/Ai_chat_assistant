@@ -14,7 +14,7 @@ export default function DocumentManager() {
   const fetchDocuments = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await axios.get("http://localhost:5000/api/documents", {
+      const response = await axios.get("https://ai-chat-assistant-j6r6.onrender.com/api/documents", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setDocuments(response.data.documents);
@@ -50,7 +50,7 @@ export default function DocumentManager() {
       const formData = new FormData();
       formData.append("file", selectedFile);
 
-      await axios.post("http://localhost:5000/api/documents/upload", formData, {
+      await axios.post("https://ai-chat-assistant-j6r6.onrender.com/api/documents/upload", formData, {
         headers: {
           Authorization: `Bearer ${token}`,
           "Content-Type": "multipart/form-data",
@@ -76,7 +76,7 @@ export default function DocumentManager() {
 
     try {
       const token = localStorage.getItem("token");
-      await axios.delete(`http://localhost:5000/api/documents/${id}`, {
+      await axios.delete(`https://ai-chat-assistant-j6r6.onrender.com/api/documents/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       alert("Document deleted successfully!");

@@ -24,7 +24,7 @@ export default function Register() {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/auth/register",
+        "https://ai-chat-assistant-j6r6.onrender.com/api/auth/register",
         form
       );
 
