@@ -1,0 +1,16 @@
+.file-upload-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.file-btn {
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 8px;
+  transition: 0.2s ease;
+}
+
+.file-btn:hover {
+  background: #2b2d33;
+}

@@ -1,0 +1,9 @@
+.model-selector {
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #202228;
+  color: white;
+  border: 1px solid #373a40;
+  cursor: pointer;
+  font-size: 0.9rem;
+}

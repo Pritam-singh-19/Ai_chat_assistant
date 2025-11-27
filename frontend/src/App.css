@@ -1,0 +1,45 @@
+/* Entire App Background */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  background: #111318;
+  color: white;
+}
+
+/* App layout (Sidebar + Main Content) */
+.app-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Sidebar takes fixed width */
+.app-container .sidebar {
+  width: 250px;
+  background: #0f1014;
+  border-right: 1px solid #1d1f24;
+}
+
+/* Main content area where pages render */
+.app-main {
+  flex: 1;
+  height: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  background: #181a20;
+}
+
+/* Smooth scroll for chat area and admin UI */
+*::-webkit-scrollbar {
+  width: 7px;
+}
+*::-webkit-scrollbar-track {
+  background: #202228;
+}
+*::-webkit-scrollbar-thumb {
+  background: #3a3d45;
+  border-radius: 10px;
+}
