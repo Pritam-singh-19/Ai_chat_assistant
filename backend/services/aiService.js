@@ -19,8 +19,8 @@ export const getGeminiResponse = async (message, documentsContext = "") => {
 
     return response.data.candidates[0].content.parts[0].text;
   } catch (error) {
-    console.log("Gemini API Error:", error.response.data);
-    throw new Error("Failed to get response from Gemini");
+    console.error("Gemini API Error:", error.response?.data || error.message);
+    throw new Error("Failed to get response from Gemini: " + (error.response?.data?.error?.message || error.message));
   }
 };
 
